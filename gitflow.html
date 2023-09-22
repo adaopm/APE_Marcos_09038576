@@ -112,48 +112,72 @@ function fadeIn(el, display) {
                 <li class="sidebar-brand"><a href="parte2.html">APE</a></li>
                 <li class="sidebar-nav-item"><a href="#page-top">Início</a></li>
 
-                <li class="sidebar-nav-item"><a href="gitflow.html">GitFlow</a></li>
+                <li class="sidebar-nav-item"><a href="gitflow.html">Git</a></li>
             </ul>
         </nav>
         <!--  -->
-
+        <section class="content-section bg-primary text-white text-center" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h1 class="text-secondary mb-0">Git - principais comandos utilizados no GitFlow e suas finalidades</h1>
+                    
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div align="left">
+                        
+                        <p>
    
 
 
-O Git Flow é um modelo de  fluxo de trabalho muito utilizado por equipes de que trabalham de modo colaborativo no desenvolvimento software, se destacando por auxiliar na organização do versionamento de códigos.
+O Git Flow é um modelo de  fluxo de trabalho muito utilizado por equipes de que trabalham de modo colaborativo no desenvolvimento software, se destacando por auxiliar na organização do versionamento de códigos.</p>
 
 Importante ressaltar que para utilização do GitFlow em ambiente Windows é necesário configurar seu computador.
-
+<br>
 -- Realizar a instação do <a href="https://www.cygwin.com/"> <font color="orange"> CygWin </font></a>. <br>
 -- Realizar a instação do <a href="https://eternallybored.org/misc/wget/"> <font color="orange"> Wget </font></a>. <br>
 -- <font color="red"> Importante </font>: o arquivo wget.exe deve ser colado dentro da pasta system32
-<!--
-Para começar uma versão, use o comando git flow release. Ele
-cria um branch da versão baseado no branch 'develop'.
 
-git flow release start RELEASE [BASE]
-Você pode opcionalmente fornecer um hash sha-1 do commit [BASE] de onde começar a versão. O commit precisa estar no branch 'develop'
+<br><br>
+Intalando o GitFlow: <br> É necessário que o git esteja instalado como pré-requisito.
+<br>
+<font color="black">
+<b>$ wget -q -O - --no-check-certificate https://raw.github.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh install stable | bash<b></font>
+<br><br>
+<h2>
+Versionamento com Git flow</h2>
+<br>
+<br><b>git flow release</b>: cria um branch da versão baseado no branch 'develop'.
+<br>
+<br><b>git flow release start RELEASE [BASE]</b>: o desenvolvedor, caso queira,  pode informar um hash sha-1 do commit [BASE] de onde começar a versão, porém o commit precisa estar no branch 'develop'.
+<br>
+<br><b>git flow release publish RELEASE</b>: publicar o branch da versão após criá-lo, para permitir commits por outros desenvolvedores.
+<br>
+<br>
+Ao realizar a finalização da versão são executados alguns passos:
+<br><b> º Mescla o branch da versão no 'master'                  </b>
+<br><b> º Etiqueta a versão com seu nome                         </b>
+<br><b> º Mescla o branch da versão de volta no 'develop'        </b>
+<br><b> º Remove o branch da versão                              </b>
+<br><b> º git flow release finish RELEASE                        </b>
 
-★ ★ ★
 
-É sensato publicar o branch da versão depois de criá-lo, para permitir commits por outros desenvolvedores. É semelhante à publicação de uma funcionalidade com o comando:
+<br><br> 
+<br><b>Os subcomandos disponíveis são</b>:
+   <br><b>init Inicializa um novo repositório git com suporte para o modelo de ramificação.</b>
+   <br><b>feature Gerencie suas ramificações de recursos.                                  </b>
+   <br><b>bugfix Gerencie seus ramos de correção de bugs.                                  </b>
+   <br><b>release Gerencie suas ramificações de lançamento.                                </b>
+   <br><b>hotfix Gerencie suas ramificações de hotfix.                                     </b>
+   <br><b>support Gerencie suas filiais de suporte.                                        </b>
+   <br><b>version Mostra informações sobre a versão.                                       </b>
+   <br><b>config Gerencie sua configuração do git-flow.                                    </b>
+   <br><b>log Mostra o log desviando do branch base.                                       </b>
+<h1 class="text-secondary mb-0" align="center">Saiba Mais  <a href="https://comandosgit.github.io/"><font color="orange"> Clicando AQUI! </font></a> </h1>
 
-git flow release publish RELEASE
-(Você pode acompanhar uma versão remota com o comando
-git flow release track RELEASE)
-
-Finalizar uma versão
-A finalização de uma versão é um dos grandes passos na ramificação/branching do git. Ele executa várias ações:
-
-Mescla o branch da versão no 'master'
-Etiqueta a versão com seu nome
-Mescla o branch da versão de volta no 'develop'
-Remove o branch da versão
-git flow release finish RELEASE
-
-
-
--->
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
         <!-- Bootstrap core JS-->
