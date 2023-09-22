@@ -10,6 +10,7 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+		<script src="https://gist.github.com/parmentf/035de27d6ed1dce0b36a.js"></script>
         <!-- Simple line icons-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
         <!-- Google fonts-->
@@ -53,20 +54,52 @@
                 </div>
             </div>
         </section>
-		
-		
-       <!-- Rodapé-->
-        <footer class="footer text-center">
+
+
+        <!-- Questões -->
+        <section class="content-section bg-primary text-white text-center" id="services">
             <div class="container px-4 px-lg-5">
-                <ul class="list-inline mb-5">
-                    
-                    <li class="list-inline-item">
-                        <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
-                    </li>
-                </ul>
-                
+                <div class="content-section-heading">
+                    <h1 class="text-secondary mb-0">Questões</h1>
+                    <h2 class="mb-5">What We Offer</h2>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3">
+						
+						
+						<i class="icon-question"></i></span>
+                        <h4><strong>Para que serve o commit e qual a melhor forma de utilizá-lo?</strong></h4>
+                        <p class="text-faded mb-0">O commit é uma função utilizada no controle de versões, utilizado para realizar o rastreamento das mudanças em um projeto, gerando um histórico. Ao utilizar o commit as alterações realizadas no código fonte projeto, deste modo criando um ponto de referência o qual é chamado de commit. A melhor forma de utilizar commits envolve algumas práticas-chave: de modo que cada commit tenha uma mensagem clara e explique bem o propósito da alteração, pois isso auxilia os demais colaboradores do projeto a entender o que esta sendo feito. deve-se fazer pequenos e pontuais commits, para implementação de funcionalidade ou resolução de problemas específicos. utilizar branches para desenvolver recursos ou corrigir bugs, e faça commits antes de mescla-los. fazer commits com determinada regularidade.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-shield"></i></span>
+                        <h4><strong>Qual a diferença entre commit e push?</strong></h4>
+                        <p class="text-faded mb-0">- Um commit é uma ação local que registra as alterações feitas nos arquivos do seu projeto, criando um ponto de verificação no histórico do repositório, incluindo informações sobre as alterações, o autor e uma mensagem descritiva e permitem que o programador rastreie o histórico do trabalho no seu ambiente de desenvolvimento. Push, por outro lado, é uma ação que envia os commits locais para um repositório remoto, como o GitHub ou o GitLab. Isso faz com que as alterações sejam compartilhadas com outros colaboradores do projeto.Resumindo, commit é usado para registrar alterações localmente, enquanto push é usado para enviar essas alterações para um repositório remoto.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-tag"></i></span>
+                        <h4><strong>O que é tag?</strong></h4>
+                        <p class="text-faded mb-0">
+                            Uma tag no Git é uma referência a um ponto específico do projeto, onde foi realizada alguma edição/alteração. Ela é usada para marcar pontos importantes de desenvolvimento, como lançamentos de versões estáveis, marcos significativos ou pontos de referência e são úteis para organizar e identificar facilmente versões específicas de um projeto. As tags são imutáveis, ou seja, uma vez criadas não podem ser alteradas. Geralmente seguem um padrão nominal, exemplo "v1.0.1". também são utilizadas ao se realizar o commit, assim criando o ponto de referência, auxiliando na criação do versionamento, facilitando assim a correção e recuperação de versões específicas de um código fonte.
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-pencil"></i></span>
+                        <h4><strong>O que é branch?</strong></h4>
+                        <p class="text-faded mb-0">No contexto do controle de versão de um software, um "branch" (ramificação) é uma linha de desenvolvimento independente que diverge do tronco principal do código-fonte. Através do branch é possível que os desenvolvedores trabalhem em paralelo sem prejudcar o código fonte principal de um projeto, se tornando um recurso fundamental para oversionamento de um sistema. O branch traz consigo várias finalidades e vantagens. Os branches facilitam o controle de versão, facilitam também o trabalho de colaboração entre os desenvolvedores, de modo que cada um pode trabalhar em um "ramo". É possível criar,listar, mesclar e excluir branches utilizando comandos Git específicos, sendo os mais comuns:git branch (para listar e criar branches), git checkout (para alternar entre branches) e git merge (para mesclar branches).</p>
+                    </div>
+					<div class="col-lg-3 col-md-6">
+                        <span class="service-icon rounded-circle mx-auto mb-3"><i class="icon-social-github"></i></span>
+                        <h4><strong>Como resolver possíveis conflitos no Git?</strong></h4>
+                        <p class="text-faded mb-0">- Conflitos no Git são comuns, mais comuns ainda emprojetos colaborativos, e faz parte do trabalho resolvê-los. Caso o Git detecte um conflito entre as modificações,seja em commits oubranches diferentes, ele não pode realizar a fusão, sendo necessária uma intervenção manual. se faz então necessário a atualização do repositório local, e identificar os conflitos executando um comando como git status ou git diff para identificar os arquivos que têm conflitos. Abrir o arquivo que possui conflitos em um editor onde haverá seções delimitadas por <<<<<<<, =======, e >>>>>>>, que indicam as alterações conflitantes.
+						Feito isso é só resolver os conflitos, testar e por fim realizar um push das alterações para o repositório remoto com git push origin branch.</p>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </section>
+        
+
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
         <!-- Bootstrap core JS-->
