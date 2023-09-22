@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<script>
+	
+	/*!
+* Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+*/
+window.addEventListener('DOMContentLoaded', event => {
+
+    const sidebarWrapper = document.getElementById('sidebar-wrapper');
+    let scrollToTopVisible = false;
+    // Closes the sidebar menu
+    const menuToggle = document.body.querySelector('.menu-toggle');
+    menuToggle.addEventListener('click', event => {
+        event.preventDefault();
+        sidebarWrapper.classList.toggle('active');
+        _toggleMenuIcon();
+        menuToggle.classList.toggle('active');
+    })
+
+    // Closes responsive menu when a scroll trigger link is clicked
+    var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
+    scrollTriggerList.map(scrollTrigger => {
+        scrollTrigger.addEventListener('click', () => {
+            sidebarWrapper.classList.remove('active');
+            menuToggle.classList.remove('active');
+            _toggleMenuIcon();
+        })
+    });
+
+    function _toggleMenuIcon() {
+        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
+        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
+        if (menuToggleBars) {
+            menuToggleBars.classList.remove('fa-bars');
+            menuToggleBars.classList.add('fa-xmark');
+        }
+        if (menuToggleTimes) {
+            menuToggleTimes.classList.remove('fa-xmark');
+            menuToggleTimes.classList.add('fa-bars');
+        }
+    }
+
+    // Scroll to top button appear
+    document.addEventListener('scroll', () => {
+        const scrollToTop = document.body.querySelector('.scroll-to-top');
+        if (document.documentElement.scrollTop > 100) {
+            if (!scrollToTopVisible) {
+                fadeIn(scrollToTop);
+                scrollToTopVisible = true;
+            }
+        } else {
+            if (scrollToTopVisible) {
+                fadeOut(scrollToTop);
+                scrollToTopVisible = false;
+            }
+        }
+    })
+})
+
+function fadeOut(el) {
+    el.style.opacity = 1;
+    (function fade() {
+        if ((el.style.opacity -= .1) < 0) {
+            el.style.display = "none";
+        } else {
+            requestAnimationFrame(fade);
+        }
+    })();
+};
+
+function fadeIn(el, display) {
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += .1) > 1)) {
+            el.style.opacity = val;
+            requestAnimationFrame(fade);
+        }
+    })();
+};
+
+	
+	
+	
+	</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ATIVIDADE PROJETO ESTRUTURADO</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+		<!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="parte2.html">APE</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Início</a></li>
+
+                <li class="sidebar-nav-item"><a href="gitflow.html">GitFlow</a></li>
+            </ul>
+        </nav>
+        <!--  -->
+
+   
+
+
+O Git Flow é um modelo de  fluxo de trabalho muito utilizado por equipes de que trabalham de modo colaborativo no desenvolvimento software, se destacando por auxiliar na organização do versionamento de códigos.
+
+Importante ressaltar que para utilização do GitFlow em ambiente Windows é necesário configurar seu computador.
+
+-- Realizar a instação do <a href="https://www.cygwin.com/"> <font color="orange"> CygWin </font></a>. <br>
+-- Realizar a instação do <a href="https://eternallybored.org/misc/wget/"> <font color="orange"> Wget </font></a>. <br>
+-- <font color="red"> Importante </font>: o arquivo wget.exe deve ser colado dentro da pasta system32
+<!--
+Para começar uma versão, use o comando git flow release. Ele
+cria um branch da versão baseado no branch 'develop'.
+
+git flow release start RELEASE [BASE]
+Você pode opcionalmente fornecer um hash sha-1 do commit [BASE] de onde começar a versão. O commit precisa estar no branch 'develop'
+
+★ ★ ★
+
+É sensato publicar o branch da versão depois de criá-lo, para permitir commits por outros desenvolvedores. É semelhante à publicação de uma funcionalidade com o comando:
+
+git flow release publish RELEASE
+(Você pode acompanhar uma versão remota com o comando
+git flow release track RELEASE)
+
+Finalizar uma versão
+A finalização de uma versão é um dos grandes passos na ramificação/branching do git. Ele executa várias ações:
+
+Mescla o branch da versão no 'master'
+Etiqueta a versão com seu nome
+Mescla o branch da versão de volta no 'develop'
+Remove o branch da versão
+git flow release finish RELEASE
+
+
+
+-->
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS
+        <script src="js/scripts.js"></script>-->
+    </body>
+</html>
