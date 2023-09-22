@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	<script>
+	
+	/*!
+* Start Bootstrap - Stylish Portfolio v6.0.6 (https://startbootstrap.com/theme/stylish-portfolio)
+* Copyright 2013-2023 Start Bootstrap
+* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-stylish-portfolio/blob/master/LICENSE)
+*/
+window.addEventListener('DOMContentLoaded', event => {
+
+    const sidebarWrapper = document.getElementById('sidebar-wrapper');
+    let scrollToTopVisible = false;
+    // Closes the sidebar menu
+    const menuToggle = document.body.querySelector('.menu-toggle');
+    menuToggle.addEventListener('click', event => {
+        event.preventDefault();
+        sidebarWrapper.classList.toggle('active');
+        _toggleMenuIcon();
+        menuToggle.classList.toggle('active');
+    })
+
+    // Closes responsive menu when a scroll trigger link is clicked
+    var scrollTriggerList = [].slice.call(document.querySelectorAll('#sidebar-wrapper .js-scroll-trigger'));
+    scrollTriggerList.map(scrollTrigger => {
+        scrollTrigger.addEventListener('click', () => {
+            sidebarWrapper.classList.remove('active');
+            menuToggle.classList.remove('active');
+            _toggleMenuIcon();
+        })
+    });
+
+    function _toggleMenuIcon() {
+        const menuToggleBars = document.body.querySelector('.menu-toggle > .fa-bars');
+        const menuToggleTimes = document.body.querySelector('.menu-toggle > .fa-xmark');
+        if (menuToggleBars) {
+            menuToggleBars.classList.remove('fa-bars');
+            menuToggleBars.classList.add('fa-xmark');
+        }
+        if (menuToggleTimes) {
+            menuToggleTimes.classList.remove('fa-xmark');
+            menuToggleTimes.classList.add('fa-bars');
+        }
+    }
+
+    // Scroll to top button appear
+    document.addEventListener('scroll', () => {
+        const scrollToTop = document.body.querySelector('.scroll-to-top');
+        if (document.documentElement.scrollTop > 100) {
+            if (!scrollToTopVisible) {
+                fadeIn(scrollToTop);
+                scrollToTopVisible = true;
+            }
+        } else {
+            if (scrollToTopVisible) {
+                fadeOut(scrollToTop);
+                scrollToTopVisible = false;
+            }
+        }
+    })
+})
+
+function fadeOut(el) {
+    el.style.opacity = 1;
+    (function fade() {
+        if ((el.style.opacity -= .1) < 0) {
+            el.style.display = "none";
+        } else {
+            requestAnimationFrame(fade);
+        }
+    })();
+};
+
+function fadeIn(el, display) {
+    el.style.opacity = 0;
+    el.style.display = display || "block";
+    (function fade() {
+        var val = parseFloat(el.style.opacity);
+        if (!((val += .1) > 1)) {
+            el.style.opacity = val;
+            requestAnimationFrame(fade);
+        }
+    })();
+};
+
+	
+	
+	
+	</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>ATIVIDADE PROJETO ESTRUTURADO</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+		<!-- Simple line icons-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <a class="menu-toggle rounded" href="#"><i class="fas fa-bars"></i></a>
+        <nav id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"><a href="parte2.html">APE</a></li>
+                <li class="sidebar-nav-item"><a href="#page-top">Início</a></li>
+
+                <li class="sidebar-nav-item"><a href="gitflow.html">GitFlow</a></li>
+            </ul>
+        </nav>
+        <!--  -->
+        <section class="content-section bg-primary text-white text-center" id="services">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading">
+                    <h1 class="text-secondary mb-0">Git - principais comandos utilizados no Git e suas finalidades</h1>
+                    
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <div align="left">
+                        
+                        <p>O Git é um sistema de controle de versão amplamente utilizado para rastrear mudanças em projetos de software e colaborar em equipe. Existem muitos comandos do Git disponíveis, cada um com sua finalidade específica.<br> Aqui você verá alguns dos principais comandos do Git e suas finalidades:</p>
+
+                      <p>
+
+Estes são apenas alguns dos comandos Git mais comuns, e que sua utilização depende do objetivo aque se deseja alcançarcomo desenvolviemnto do projeto. Portanto, é recomendável aprender mais sobre o Git e suas funcionalidades para usá-lo de forma eficiente.</p>
+
+
+
+
+
+
+
+
+                      
+<br><br> 
+<h1 class="text-secondary mb-0" align="center">Saiba Mais  <a href="https://comandosgit.github.io/"><font color="orange"> Clicando AQUI! </font></a> </h1>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS
+        <script src="js/scripts.js"></script>-->
+    </body>
+</html>
