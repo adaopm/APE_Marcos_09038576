@@ -6,3 +6,4 @@ Git-Flow. cheatsheet do git-flow. Disponível em: <https://danielkummer.github.i
 alura. Git Flow: entenda o que é, como e quando utilizar. Disponível em: <https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar>. Acesso em: 22 setembro 2023.
 Git. --distributed-is-the-new-centralized. Disponível em: <https://git-scm.com/docs/git-gui/pt_BR>. Acesso em: 22 setembro 2023.
 Cygwin. This is the home of the Cygwin project. Disponível em: <https://www.cygwin.com/. Acesso em: 22 setembro 2023.
+
