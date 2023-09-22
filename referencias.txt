@@ -1,0 +1,8 @@
+REFERÊNCIA BIBLIOGRÁFICA: 
+
+GNU Wget. Windows binaries of GNU Wget. Disponível em: <https://eternallybored.org/misc/wget/>. Acesso em: 22 setembro 2023.
+Comandos Git. Aprenda Git do básico ao avançado. Disponível em: <https://comandosgit.github.io/>. Acesso em: 22 setembro 2023.
+Git-Flow. cheatsheet do git-flow. Disponível em: <https://danielkummer.github.io/git-flow-cheatsheet/index.pt_BR.html>. Acesso em: 22 setembro 2023.
+alura. Git Flow: entenda o que é, como e quando utilizar. Disponível em: <https://www.alura.com.br/artigos/git-flow-o-que-e-como-quando-utilizar>. Acesso em: 22 setembro 2023.
+Git. --distributed-is-the-new-centralized. Disponível em: <https://git-scm.com/docs/git-gui/pt_BR>. Acesso em: 22 setembro 2023.
+Cygwin. This is the home of the Cygwin project. Disponível em: <https://www.cygwin.com/. Acesso em: 22 setembro 2023.
